@@ -101,3 +101,8 @@ PRODUCT_PACKAGES += \
 # Config
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig
+
+# LMO Freeform
+PRODUCT_PACKAGES += \
+    LMOFreeform \
+    LMOFreeformSidebar
