@@ -1,5 +1,6 @@
 PRODUCT_PACKAGES += \
     ThemePicker \
+    YAAPWalls
 
 # Extra tools in YAAP
 PRODUCT_PACKAGES += \
