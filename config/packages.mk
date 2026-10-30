@@ -107,3 +107,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LMOFreeform \
     LMOFreeformSidebar
+
+# Boot Animation
+$(call inherit-product, vendor/yaap/bootanimation/bootanimation.mk)
