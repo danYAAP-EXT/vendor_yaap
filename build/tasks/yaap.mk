@@ -1,4 +1,4 @@
-YAAP_TARGET_PACKAGE := $(PRODUCT_OUT)/YAAP-$(YAAP_VERSION).zip
+YAAP_TARGET_PACKAGE := $(PRODUCT_OUT)/danYAAP-$(YAAP_VERSION).zip
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
 .PHONY: otapackage yaap bacon
@@ -8,15 +8,7 @@ yaap: otapackage
 	$(hide) $(SHA256) $(YAAP_TARGET_PACKAGE) | cut -d ' ' -f1 > $(YAAP_TARGET_PACKAGE).sha256sum
 	$(hide) TARGET_BUILD_GAPPS="$(TARGET_BUILD_GAPPS)" FORCE_JSON="$(FORCE_JSON)" ./vendor/yaap/tools/generate_json_build_info.sh $(YAAP_TARGET_PACKAGE)
 	@echo -e ""
-	@echo -e "${cya}Building ${bldcya}YAAP${txtrst}";
-	@echo -e "	:::   :::   :::         :::     :::::::::  "
-	@echo -e "	:+:   :+: :+: :+:     :+: :+:   :+:    :+: "
-	@echo -e "	 +:+ +:+ +:+   +:+   +:+   +:+  +:+    +:+ "
-	@echo -e "	  +#++: +#++:++#++: +#++:++#++: +#++:++#+  "
-	@echo -e "	   +#+  +#+     +#+ +#+     +#+ +#+        "
-	@echo -e "	   #+#  #+#     #+# #+#     #+# #+#        "
-	@echo -e "	   ###  ###     ### ###     ### ###        "
-	@echo -e "		Yet Another AOSP Project			   "
+	@echo -e "${cya}Building ${bldcya}danYAAP${txtrst}";
 	@echo -e ""
 	@echo -e "zip: "$(YAAP_TARGET_PACKAGE)
 	@echo -e "sha256: `cat $(YAAP_TARGET_PACKAGE).sha256sum | cut -d ' ' -f 1`"
