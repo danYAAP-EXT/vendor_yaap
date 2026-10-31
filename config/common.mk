@@ -196,6 +196,12 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.egl.blobcache.multifile=true \
     ro.egl.blobcache.multifile_limit=33554432
 
+# Maintainer
+TARGET_MAINTAINER ?= "Tokino Mary"
+
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.yaap.maintainer=$(TARGET_MAINTAINER)
+
 # Gapps and Microg
 ifeq ($(TARGET_BUILD_GAPPS),true)
     $(call inherit-product-if-exists, vendor/google/gms/config.mk)
